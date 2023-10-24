@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encryption/Decryption</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+        h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    
+    form {
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    
+    .plaintext-ciphertext {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .plaintext-ciphertext textarea {
+      width: 45%;
+    }
+
+    
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Encryption</h1>
+
+   
+    <form action="index.php" method="post">
+      <input type="text" name="public_key" placeholder="Public key">
+
+      <div class="plaintext-ciphertext">
+        <textarea name="plaintext" placeholder="Plain text"></textarea>
+        <textarea name="ciphertext" placeholder="Ciphertext"></textarea>
+      </div>
+
+      <button type="submit" name="encrypt">Encrypt</button>
+    </form>
+  </div>
+</body>
+</html>
